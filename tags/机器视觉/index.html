@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Categories | FeiHuaLianPian</title>
+<title>机器视觉 | FeiHuaLianPian</title>
 <meta name="keywords" content="" />
 <meta name="description" content="有事没事说废话！">
 <meta name="author" content="废话">
-<link rel="canonical" href="https://luoshuiai.github.io/Luoshuiai/categories/" />
+<link rel="canonical" href="https://luoshuiai.github.io/Luoshuiai/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" />
 <link crossorigin="anonymous" href="/Luoshuiai/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://luoshuiai.github.io/Luoshuiai/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://luoshuiai.github.io/Luoshuiai/favicon-16x16.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="https://luoshuiai.github.io/Luoshuiai/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://luoshuiai.github.io/Luoshuiai/categories/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://luoshuiai.github.io/Luoshuiai/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,15 +55,15 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Categories" />
+</noscript><meta property="og:title" content="机器视觉" />
 <meta property="og:description" content="有事没事说废话！" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://luoshuiai.github.io/Luoshuiai/categories/" /><meta property="og:image" content="https://luoshuiai.github.io/Luoshuiai/papermod-cover.png"/>
+<meta property="og:url" content="https://luoshuiai.github.io/Luoshuiai/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" /><meta property="og:image" content="https://luoshuiai.github.io/Luoshuiai/papermod-cover.png"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://luoshuiai.github.io/Luoshuiai/papermod-cover.png"/>
 
-<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:title" content="机器视觉"/>
 <meta name="twitter:description" content="有事没事说废话！"/>
 
 </head>
@@ -110,7 +110,7 @@
         <ul id="menu">
             <li>
                 <a href="https://luoshuiai.github.io/Luoshuiai/categories/" title="目录">
-                    <span class="active">目录</span>
+                    <span>目录</span>
                 </a>
             </li>
             <li>
@@ -131,19 +131,23 @@
         </ul>
     </nav>
 </header>
-<main class="main">
-<header class="page-header">
-    <h1>Categories</h1>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://luoshuiai.github.io/Luoshuiai/">Home</a>&nbsp;»&nbsp;<a href="https://luoshuiai.github.io/Luoshuiai/tags/">Tags</a></div>
+  <h1>机器视觉</h1>
 </header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="https://luoshuiai.github.io/Luoshuiai/categories/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/">机器视觉 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://luoshuiai.github.io/Luoshuiai/categories/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/">机器视觉基础 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Convolutions
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>默认描述机器视觉中的概念。
+卷积  卷积的目的是什么？→提取图像特征，去除噪点 卷积是什么？→把当前点和周围点加权平均 卷积计算公式：$$(𝑓 ∗ 𝑔)[𝑚, 𝑛] = \sum_{k,l} 𝑓[𝑚 − 𝑘, 𝑛 − 𝑙]𝑔[𝑘, 𝑙]$$  卷积核  卷积核是什么？→当前点与周围点加权平均的权值 如何进行卷积？  对卷积核进行翻转 ⇒ 把卷积核放入图像中  把卷积核中各个点与在图像中对应点加权求和，得到中间点 e 的值 卷积核平移、下滑，对所有点进行卷积运算    卷积的特性  线性：分开求和与组合求和结果不变  Linearity: filter(f1 &#43; f2) = filter(f1) &#43; filter(f2)   平移不变性：先卷积再平移与先平移再卷积结果不变  Shift invariance: same behavior regardless of pixel location: filter(shift(f)) = shift(filter(f)) 结论：任何平移不变的操作都能用卷积来表示  Theoretical result: any linear shift-invariant operator can be r epresented as a convolution 图像向左平移一个像素         交换律  Commutative: $a * b = b * a$ Conceptually no difference between filter and signal   结合律  Associative: $a * (b * c) = (a * b) * c$ Often apply several filters one after another: $(((a * b1) * b2) * b3)$ This is equivalent to applying one filter: $a * (b1 * b2 * b3)$   分配律  Distributes over addition: $a * (b &#43; c) = (a * b) &#43; (a * c)$ Scalars factor out: $ka * b = a * kb = k (a * b)$ Identity: unit impulse $e = […, 0, 0, 1, 0, 0, …],a * e = a$    卷积为什么要翻转  模板不反转称为相关 在实际使用中，很多模板都是对称的，并不强调翻转 数学中卷积，主要是为了诸如信号处理、求两个随机变量和的分布等而定义的运算，所以需要“翻转”是根据问题的需要而确定的 卷积神经网络中“卷积”，是为了提取图像的特征，其实只借鉴了“加权求和”的特点 还有一点一定要说的是：数学中的“卷积核”都是已知的或者给定的，卷积神经网络中“卷积核”本来就是trainable的参数，不是给定的，根据数据训练学习的，那么翻不翻转还有什么关系呢？因为无论翻转与否对应的都是未知参数！ 二维卷积在图像处理中的应用就是为了提取特征，如高通滤波器提取边缘特征可以看作是一种局部特征提取，低通滤波器进行去噪平滑可以看作是一种全局特征提取，而在神经网络中对于一个图像的分类任务来说，我们并不清楚图像中哪一部位应该提取全局特征还是局部特征，因此卷积核就变成了可训练的参数，根据误差函数来确定哪一部位应该提取哪一种特征，这就是神经网络中卷积核之所以为参数的本质，以结果为导向，而不像数学中的卷积有明确的目标。  存在的问题  卷积存在的问题→对原图像进行卷积，卷积图像会比原图像小一圈     如何保证卷积图像和原图像一样大小?...</p>
+  </section>
+  <footer class="entry-footer"><span title='2022-02-23 11:43:48 +0800 CST'>February 23, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;废话</footer>
+  <a class="entry-link" aria-label="post link to Convolutions" href="https://luoshuiai.github.io/Luoshuiai/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/convolutions/"></a>
+</article>
     </main>
     
 <footer class="footer">
