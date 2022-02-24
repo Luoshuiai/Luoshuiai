@@ -191,6 +191,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>python的opencv入门
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>读取图片 	cv2.imread(&#39;&#39;,img) 改变图片大小  cv2.resize(img, (300,300)) cv2.resize(img, (0,0),fx=0.5,fy=0.5) fx,fy 缩放倍数 读取视频 	# 读取已经保存的视频 cv2.VideoCapture(&#39;voideo.mp4&#39;) # 读取镜头视频，通过编号选择镜头 # 假设笔记本有两个镜头，那么电脑自带镜头编号0，外接镜头编号1 cap = cv2.VideoCapture(1) # 逐帧显示视频 while Ture: # 读取下一帧 ret,frame=cap.read() # ret 取得下一帧是否成功 # frame 取得的下一帧 # 判断视频帧是否读取成功 if ret: # 把每帧的图像缩放0.4倍 frame = cv2.resize(frame,(0,0),fx=0.4,fy=0.4) cv2.imshow(&#39;video&#39;,frame) else: break # 每个十毫秒显示一帧视频，等待中按 q 中止播放 if cv2.waitkey(10) == ord(&#39;q&#39;): break numpy 与图片的关系 打印一张图片的类型
+	print(img) print(type(img)) print(img.shape) 输出： # 输出图片的详细数据 [[[255 255 255] [255 255 255] [255 255 255] ....</p>
+  </section>
+  <footer class="entry-footer"><span title='2022-02-23 22:50:19 +0800 CST'>February 23, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;废话</footer>
+  <a class="entry-link" aria-label="post link to python的opencv入门" href="https://luoshuiai.github.io/Luoshuiai/post/python%E7%9A%84opencv%E5%85%A5%E9%97%A8/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>机器视觉
     </h2>
   </header>

@@ -9,7 +9,17 @@
       <link>https://luoshuiai.github.io/Luoshuiai/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 23 Feb 2022 17:23:18 +0800</lastBuildDate><atom:link href="https://luoshuiai.github.io/Luoshuiai/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 22:50:19 +0800</lastBuildDate><atom:link href="https://luoshuiai.github.io/Luoshuiai/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python的opencv入门</title>
+      <link>https://luoshuiai.github.io/Luoshuiai/post/python%E7%9A%84opencv%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Wed, 23 Feb 2022 22:50:19 +0800</pubDate>
+      
+      <guid>https://luoshuiai.github.io/Luoshuiai/post/python%E7%9A%84opencv%E5%85%A5%E9%97%A8/</guid>
+      <description>读取图片 	cv2.imread(&#39;&#39;,img) 改变图片大小  cv2.resize(img, (300,300)) cv2.resize(img, (0,0),fx=0.5,fy=0.5) fx,fy 缩放倍数 读取视频 	# 读取已经保存的视频 cv2.VideoCapture(&#39;voideo.mp4&#39;) # 读取镜头视频，通过编号选择镜头 # 假设笔记本有两个镜头，那么电脑自带镜头编号0，外接镜头编号1 cap = cv2.VideoCapture(1) # 逐帧显示视频 while Ture: # 读取下一帧 ret,frame=cap.read() # ret 取得下一帧是否成功 # frame 取得的下一帧 # 判断视频帧是否读取成功 if ret: # 把每帧的图像缩放0.4倍 frame = cv2.resize(frame,(0,0),fx=0.4,fy=0.4) cv2.imshow(&#39;video&#39;,frame) else: break # 每个十毫秒显示一帧视频，等待中按 q 中止播放 if cv2.waitkey(10) == ord(&#39;q&#39;): break numpy 与图片的关系 打印一张图片的类型
+	print(img) print(type(img)) print(img.shape) 输出： # 输出图片的详细数据 [[[255 255 255] [255 255 255] [255 255 255] .</description>
+    </item>
+    
     <item>
       <title>机器视觉</title>
       <link>https://luoshuiai.github.io/Luoshuiai/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/</link>
