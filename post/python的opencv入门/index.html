@@ -103,8 +103,8 @@
   "keywords": [
     "", ""
   ],
-  "articleBody": "读取图片 \tcv2.imread('',img) 改变图片大小  cv2.resize(img, (300,300)) cv2.resize(img, (0,0),fx=0.5,fy=0.5) fx,fy 缩放倍数 读取视频 \t# 读取已经保存的视频 cv2.VideoCapture('voideo.mp4') # 读取镜头视频，通过编号选择镜头 # 假设笔记本有两个镜头，那么电脑自带镜头编号0，外接镜头编号1 cap = cv2.VideoCapture(1) # 逐帧显示视频 while Ture: # 读取下一帧 ret,frame=cap.read() # ret 取得下一帧是否成功 # frame 取得的下一帧 # 判断视频帧是否读取成功 if ret: # 把每帧的图像缩放0.4倍 frame = cv2.resize(frame,(0,0),fx=0.4,fy=0.4) cv2.imshow('video',frame) else: break # 每个十毫秒显示一帧视频，等待中按 q 中止播放 if cv2.waitkey(10) == ord('q'): break numpy 与图片的关系 打印一张图片的类型\n\tprint(img) print(type(img)) print(img.shape) 输出： # 输出图片的详细数据 [[[255 255 255] [255 255 255] [255 255 255] ... [255 255 255] [255 255 255] [255 255 255]] [[255 255 255] [255 255 255] [255 255 255] ... [255 255 255] [255 255 255] [255 255 255]]] # 输出图片的数据类型：ndarray # ndarray 多维数组 # 输出图片的维度 # 彩色图片即是RBG # 在opencv中，彩色图片颜色顺序是：B G R (474, 474, 3) 创建图片\n\timport random import cv2 import numpy as np # 创建图片 # 图片的大小 300*300 像素 # 图片的维度 3 (RGB) # np.uiunt8 设置多维数组中数的格式，uiuin8 正数 # b g r 0 255 255 img = np.empty((300, 300, 3), np.uint8) for row in range(300): for col in range(300): img[row][col] = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)] cv2.imshow('img', img) cv2.waitKey(0) 切割图片\n\t# 切割图片img # 高度坐标：0-150 像素点 宽度坐标：200-400像素点 newImg=img[:150,200:400] cv2.imshow('img',img) cv2.imshow('newImg',newImg) 常用函数 彩色图片转灰度图片\n\t参数：图片 BGR转灰度 imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) 高斯模糊\n\t# 参数：图片 高斯核 标准差 cv2.GaussianBlur(img,(5,5),0) 边缘提取\n\t# 参数：图片 LowThreshold HighThreshold cv2.canny(img, 150, 200) 图片膨胀(图片线条变粗)\n\timprot numpy as np # 膨胀核 二维数组 kernel = np.ones((3,3), np.unit8) # 参数：图片 膨胀核 膨胀次数 dilate=cv2.dilate(img, kernel, iterations = 1) 图片侵蚀(图片线条变细)\n\timprot numpy as np # 膨胀核 二维数组 kernel = np.ones((3,3), np.unit8) # 参数：图片 膨胀核 膨胀次数 erode=cv2.erode(img, kernel, iterations = 1) 在图片中画图形，写字 \timport cv2 import numpy as np # 创建图片 img = np.zeros((600, 600, 3), np.uint8) # 图片中画线 # 参数：图片 起始点坐标 终点坐标 线的颜色 线的宽度 cv2.line(img, (0, 0), (400, 400), (255, 255, 255), 1) # 画矩形 # 最后一个参数 cv2.FILED 矩形填充，如果是数字则是边缘线条宽度 cv2.rectangle(img, (0, 0), (400, 300), (255, 255, 255), cv2.FILED) # 画圆 # 参数 图片 圆心坐标 半径 边缘线条颜色 边缘线条宽度 cv2.circle(img, (400,500), 20, (255, 255, 255), 1) # 添加文字（不支持中文） # 参数：图片 添加的文字 起始点坐标 文字字体 文字大小 文字颜色 文字线条宽度 cv2.putText(img, 'Hi', (100, 500), cv2.FONT_ITALIC, 1, (255, 255, 255), 1) cv2.imshow('img', img) cv2.waitKey(0) ",
-  "wordCount" : "333",
+  "articleBody": "读取图片 \tcv2.imread('',img) 改变图片大小  cv2.resize(img, (300,300)) cv2.resize(img, (0,0),fx=0.5,fy=0.5) fx,fy 缩放倍数 读取视频 \t# 读取已经保存的视频 cv2.VideoCapture('voideo.mp4') # 读取镜头视频，通过编号选择镜头 # 假设笔记本有两个镜头，那么电脑自带镜头编号0，外接镜头编号1 cap = cv2.VideoCapture(1) # 逐帧显示视频 while Ture: # 读取下一帧 ret,frame=cap.read() # ret 取得下一帧是否成功 # frame 取得的下一帧 # 判断视频帧是否读取成功 if ret: # 把每帧的图像缩放0.4倍 frame = cv2.resize(frame,(0,0),fx=0.4,fy=0.4) cv2.imshow('video',frame) else: break # 每个十毫秒显示一帧视频，等待中按 q 中止播放 if cv2.waitkey(10) == ord('q'): break numpy 与图片的关系 打印一张图片的类型\n\tprint(img) print(type(img)) print(img.shape) 输出： # 输出图片的详细数据 [[[255 255 255] [255 255 255] [255 255 255] ... [255 255 255] [255 255 255] [255 255 255]] [[255 255 255] [255 255 255] [255 255 255] ... [255 255 255] [255 255 255] [255 255 255]]] # 输出图片的数据类型：ndarray # ndarray 多维数组 # 输出图片的维度 # 彩色图片即是RBG # 在opencv中，彩色图片颜色顺序是：B G R (474, 474, 3) 创建图片\n\timport random import cv2 import numpy as np # 创建图片 # 图片的大小 300*300 像素 # 图片的维度 3 (RGB) # np.uiunt8 设置多维数组中数的格式，uiuin8 正数 # b g r 0 255 255 img = np.empty((300, 300, 3), np.uint8) for row in range(300): for col in range(300): img[row][col] = [random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)] cv2.imshow('img', img) cv2.waitKey(0) 切割图片\n\t# 切割图片img # 高度坐标：0-150 像素点 宽度坐标：200-400像素点 newImg=img[:150,200:400] cv2.imshow('img',img) cv2.imshow('newImg',newImg) 常用函数 彩色图片转灰度图片\n\t参数：图片 BGR转灰度 imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) 高斯模糊\n\t# 参数：图片 高斯核 标准差 cv2.GaussianBlur(img,(5,5),0) 边缘提取\n\t# 参数：图片 LowThreshold HighThreshold cv2.canny(img, 150, 200) 图片膨胀(图片线条变粗)\n\timprot numpy as np # 膨胀核 二维数组 kernel = np.ones((3,3), np.unit8) # 参数：图片 膨胀核 膨胀次数 dilate=cv2.dilate(img, kernel, iterations = 1) 图片侵蚀(图片线条变细)\n\timprot numpy as np # 膨胀核 二维数组 kernel = np.ones((3,3), np.unit8) # 参数：图片 膨胀核 膨胀次数 erode=cv2.erode(img, kernel, iterations = 1) 在图片中画图形，写字 \timport cv2 import numpy as np # 创建图片 img = np.zeros((600, 600, 3), np.uint8) # 图片中画线 # 参数：图片 起始点坐标 终点坐标 线的颜色 线的宽度 cv2.line(img, (0, 0), (400, 400), (255, 255, 255), 1) # 画矩形 # 最后一个参数 cv2.FILED 矩形填充，如果是数字则是边缘线条宽度 cv2.rectangle(img, (0, 0), (400, 300), (255, 255, 255), cv2.FILED) # 画圆 # 参数 图片 圆心坐标 半径 边缘线条颜色 边缘线条宽度 cv2.circle(img, (400,500), 20, (255, 255, 255), 1) # 添加文字（不支持中文） # 参数：图片 添加的文字 起始点坐标 文字字体 文字大小 文字颜色 文字线条宽度 cv2.putText(img, 'Hi', (100, 500), cv2.FONT_ITALIC, 1, (255, 255, 255), 1) cv2.imshow('img', img) cv2.waitKey(0) 检测图片颜色 \timport cv2 import numpy as np def empty(v): pass img = cv2.imread('xx,jpg') img = cv2.resize(img, (0, 0), fx=1, fy=1) # 创建一个 TrackBar 控制界面 # 通过 TrackBar 手动调节检测颜色 # 把 img 从 BGR 颜色空间转换成 HSV 颜色空间 cv2.namedWindow('TrackBar') cv2.resizeWindow('TrackBar', 640, 320) cv2.createTrackbar('hug min', 'TrackBar', 0, 179, empty) cv2.createTrackbar('hug max', 'TrackBar', 179, 179, empty) cv2.createTrackbar('sar min', 'TrackBar', 0, 255, empty) cv2.createTrackbar('sar max', 'TrackBar', 255, 255, empty) cv2.createTrackbar('val min', 'TrackBar', 0, 255, empty) cv2.createTrackbar('val max', 'TrackBar', 255, 255, empty) hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) # 手动选择颜色 while True: h_min = cv2.getTrackbarPos('hug min', 'TrackBar') h_max = cv2.getTrackbarPos('hug max', 'TrackBar') s_min = cv2.getTrackbarPos('sar min', 'TrackBar') s_max = cv2.getTrackbarPos('sar max', 'TrackBar') v_min = cv2.getTrackbarPos('val min', 'TrackBar') v_max = cv2.getTrackbarPos('val max', 'TrackBar') print(h_min, h_max, s_min, s_max, v_min, v_max) lower = np.array([h_min, s_min, v_min]) upper = np.array([h_max, s_max, v_max]) # 获取在 lower 与 upper 范围内的颜色 mask = cv2.inRange(hsv, lowerb=lower, upperb=upper) # 把两张图片中的每一个bit做 and 运算 # 在 img 图片中把 mask 图片过滤出来 result = cv2.bitwise_and(img, img, mask=mask) cv2.imshow('img', img) cv2.imshow('hsv', hsv) cv2.imshow('msak', mask) cv2.imshow('result', result) cv2.waitKey(1) 轮廓检测 \timport cv2 img = cv2.imread('shape.jpg') imgContour = img.copy() # img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) canny = cv2.Canny(img, 100, 200) # 轮廓检测 # 参数：图片 检测模式（外轮廓、内轮廓。。） 近似方法 # 返回参数：轮廓 阶层 contours, hierarchy = cv2.findContours(canny, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE) # 把轮廓画出来 for cnt in contours: # # 参数：图片 图廓点 画的轮廓数量 颜色 宽度 cv2.drawContours(imgContour, cnt, -1, (255, 0, 0), 4) # 轮廓面积 area = cv2.contourArea(cnt) # 通过面积大小来过滤噪点 面积大于 500 对轮廓进行近似 if area  500: # 轮廓边长 peri = cv2.arcLength(cnt, True) # 轮廓近似成图形 # 输入参数：轮廓 近似值 是否是封闭图形 # 输出参数：近似图形的顶点 vertices = cv2.approxPolyDP(cnt, peri * 0.02, True) # 近似轮廓顶点 corners = len(vertices) # print(vertices) # 对每个轮廓生成外接矩形 # 输出参数：需要生成外接矩形的轮廓 # 输出参数：左上角x坐标 左上角y坐标 宽度 高度 x, y, w, h = cv2.boundingRect(vertices) # 在图片中画出外接矩形 # 输入参数：图片 左上角顶点坐标 右下角顶点坐标 颜色 宽度 cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 4) # 通过近似轮廓有几个顶点判断轮廓的形状 if corners == 3: cv2.putText(imgContour, 'Triangle', (x, y - 5), cv2.FONT_ITALIC, 1, (0, 0, 255), 2) if corners == 4: cv2.putText(imgContour, 'Rectangle', (x, y - 5), cv2.FONT_ITALIC, 1, (0, 0, 255), 2) if corners == 5: cv2.putText(imgContour, 'Pentagon', (x, y - 5), cv2.FONT_ITALIC, 1, (0, 0, 255), 2) if corners  5: cv2.putText(imgContour, 'Circle', (x, y - 5), cv2.FONT_ITALIC, 1, (0, 0, 255), 2) cv2.imshow('img', img) cv2.imshow('canny', canny) cv2.imshow('imgContour', imgContour) cv2.waitKey(0) 人脸识别 \timport cv2 img = cv2.imread('lenna.jpg') # 彩色图片转灰度图片 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # 导入Cascade分类器 # face_detect.xml 为opencv 已经训练好的模型 faceCascade = cv2.CascadeClassifier('face_detect.xml') # 输入参数：图片 在多次全局搜索中图片缩小的笔记，即尺度放大的比例 最大化抑制的次数，人脸被选中三次以上才判断为人脸 faceRect = faceCascade.detectMultiScale(gray, 1.1, 3) print(len(faceRect)) for (x, y, w, h) in faceRect: cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2) cv2.imshow('img', img) cv2.waitKey(0) project  通过镜头获取画面 手拿笔在镜头中运动 在窗口中标记笔的运动轨迹 对于多支笔的轨迹，通过不同颜色标记出来  \timport cv2 import numpy as np video = cv2.VideoCapture(0) # [x,y,c] drawPoints = [] def findPen(img): hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) lower = np.array([28, 35, 83]) upper = np.array([55, 255, 232]) mask = cv2.inRange(hsv, lower, upper) result = cv2.bitwise_and(img, img, mask=mask) penx, peny = findContour(mask) cv2.circle(imgContour, (penx, peny), 5, (0, 0, 255), cv2.FILLED) if peny != -1: drawPoints.append([penx, peny]) # cv2.imshow('result', result) def findContour(img): # 轮廓检测 # 参数：图片 检测模式（外轮廓、内轮廓。。） 近似方法 # 返回参数：轮廓 阶层 contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE) x, y, w, h = 0, 0, 0, 0 # 把轮廓画出来 for cnt in contours: # # 参数：图片 图廓点 画的轮廓数量 颜色 宽度 # cv2.drawContours(imgContour, cnt, -1, (255, 0, 0), 4) # 轮廓面积 area = cv2.contourArea(cnt) # 通过面积大小来过滤噪点 面积大于 500 对轮廓进行近似 if area  500: # 轮廓边长 peri = cv2.arcLength(cnt, True) # 轮廓近似成图形 # 输入参数：轮廓 近似值 是否是封闭图形 # 输出参数：近似图形的顶点 vertices = cv2.approxPolyDP(cnt, peri * 0.02, True) # print(vertices) # 对每个轮廓生成外接矩形 # 输出参数：需要生成外接矩形的轮廓 # 输出参数：左上角x坐标 左上角y坐标 宽度 高度 x, y, w, h = cv2.boundingRect(vertices) return x + w // 2, y + h // 2 def draw(drawPoints): for point in drawPoints: cv2.circle(imgContour, (point[0], point[1]), 5, (0, 0, 255), cv2.FILLED) while True: ret, frame = video.read() if ret: cv2.imshow('video', frame) imgContour = frame.copy() findPen(frame) draw(drawPoints) cv2.imshow('contour', imgContour) else: break if cv2.waitKey(1) == ord('q'): break ",
+  "wordCount" : "971",
   "inLanguage": "en",
   "datePublished": "2022-02-23T22:50:19+08:00",
   "dateModified": "2022-02-23T22:50:19+08:00",
@@ -143,7 +143,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://luoshuiai.github.io/Luoshuiai/" accesskey="h" title="Home (Alt + H)">Home</a>
+            <a href="https://luoshuiai.github.io/Luoshuiai/" accesskey="h" title="FeiHuaLianPian (Alt + H)">FeiHuaLianPian</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -169,23 +169,28 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://luoshuiai.github.io/Luoshuiai/categories/" title="目录">
-                    <span>目录</span>
+                <a href="https://luoshuiai.github.io/Luoshuiai/archives" title="Archives">
+                    <span>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://luoshuiai.github.io/Luoshuiai/tags/" title="标签">
-                    <span>标签</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://luoshuiai.github.io/Luoshuiai/search/" title="🔍">
+                <a href="https://luoshuiai.github.io/Luoshuiai/Search/" title="🔍">
                     <span>🔍</span>
                 </a>
             </li>
             <li>
-                <a href="https://luoshuiai.github.io/Luoshuiai/archives" title="归档">
-                    <span>归档</span>
+                <a href="https://luoshuiai.github.io/Luoshuiai/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://luoshuiai.github.io/Luoshuiai/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://luoshuiai.github.io/Luoshuiai/series" title="Series">
+                    <span>Series</span>
                 </a>
             </li>
         </ul>
@@ -199,7 +204,7 @@
     <h1 class="post-title">
       python的opencv入门
     </h1>
-    <div class="post-meta"><span title='2022-02-23 22:50:19 +0800 CST'>February 23, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;废话
+    <div class="post-meta"><span title='2022-02-23 22:50:19 +0800 CST'>February 23, 2022</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;废话
 
 </div>
   </header> <div class="toc">
@@ -220,7 +225,15 @@
                 <li>
                     <a href="#%e5%b8%b8%e7%94%a8%e5%87%bd%e6%95%b0" aria-label="常用函数">常用函数</a></li>
                 <li>
-                    <a href="#%e5%9c%a8%e5%9b%be%e7%89%87%e4%b8%ad%e7%94%bb%e5%9b%be%e5%bd%a2%e5%86%99%e5%ad%97" aria-label="在图片中画图形，写字">在图片中画图形，写字</a>
+                    <a href="#%e5%9c%a8%e5%9b%be%e7%89%87%e4%b8%ad%e7%94%bb%e5%9b%be%e5%bd%a2%e5%86%99%e5%ad%97" aria-label="在图片中画图形，写字">在图片中画图形，写字</a></li>
+                <li>
+                    <a href="#%e6%a3%80%e6%b5%8b%e5%9b%be%e7%89%87%e9%a2%9c%e8%89%b2" aria-label="检测图片颜色">检测图片颜色</a></li>
+                <li>
+                    <a href="#%e8%bd%ae%e5%bb%93%e6%a3%80%e6%b5%8b" aria-label="轮廓检测">轮廓检测</a></li>
+                <li>
+                    <a href="#%e4%ba%ba%e8%84%b8%e8%af%86%e5%88%ab" aria-label="人脸识别">人脸识别</a></li>
+                <li>
+                    <a href="#project" aria-label="project">project</a>
                 </li>
             </ul>
         </div>
@@ -355,6 +368,201 @@
 	cv2.putText(img, 'Hi', (100, 500), cv2.FONT_ITALIC, 1, (255, 255, 255), 1)
 	cv2.imshow('img', img)  
 	cv2.waitKey(0)
+</code></pre><h3 id="检测图片颜色">检测图片颜色<a hidden class="anchor" aria-hidden="true" href="#检测图片颜色">#</a></h3>
+<pre tabindex="0"><code>	import cv2  
+	import numpy as np  
+	  
+	  
+	def empty(v):  
+	    pass  
+	  
+	  
+	img = cv2.imread('xx,jpg')  
+	img = cv2.resize(img, (0, 0), fx=1, fy=1)
+	# 创建一个 TrackBar 控制界面
+	# 通过 TrackBar 手动调节检测颜色
+	# 把 img 从 BGR 颜色空间转换成 HSV 颜色空间  
+	cv2.namedWindow('TrackBar')  
+	cv2.resizeWindow('TrackBar', 640, 320)  
+	cv2.createTrackbar('hug min', 'TrackBar', 0, 179, empty)  
+	cv2.createTrackbar('hug max', 'TrackBar', 179, 179, empty)  
+	cv2.createTrackbar('sar min', 'TrackBar', 0, 255, empty)  
+	cv2.createTrackbar('sar max', 'TrackBar', 255, 255, empty)  
+	cv2.createTrackbar('val min', 'TrackBar', 0, 255, empty)  
+	cv2.createTrackbar('val max', 'TrackBar', 255, 255, empty)  
+	  
+	hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)  
+	# 手动选择颜色
+	while True:  
+	    h_min = cv2.getTrackbarPos('hug min', 'TrackBar')  
+	    h_max = cv2.getTrackbarPos('hug max', 'TrackBar')  
+	    s_min = cv2.getTrackbarPos('sar min', 'TrackBar')  
+	    s_max = cv2.getTrackbarPos('sar max', 'TrackBar')  
+	    v_min = cv2.getTrackbarPos('val min', 'TrackBar')  
+	    v_max = cv2.getTrackbarPos('val max', 'TrackBar')  
+	    print(h_min, h_max, s_min, s_max, v_min, v_max)  
+	    lower = np.array([h_min, s_min, v_min])  
+	    upper = np.array([h_max, s_max, v_max])  
+
+		# 获取在  lower 与 upper 范围内的颜色
+	    mask = cv2.inRange(hsv, lowerb=lower, upperb=upper)  
+	    
+		# 把两张图片中的每一个bit做 and 运算  
+		# 在 img 图片中把 mask 图片过滤出来  
+		result = cv2.bitwise_and(img, img, mask=mask)  
+		cv2.imshow('img', img)  
+		cv2.imshow('hsv', hsv)  
+		cv2.imshow('msak', mask)  
+		cv2.imshow('result', result)  
+		cv2.waitKey(1)
+</code></pre><h3 id="轮廓检测">轮廓检测<a hidden class="anchor" aria-hidden="true" href="#轮廓检测">#</a></h3>
+<pre tabindex="0"><code>	import cv2    
+	  
+	img = cv2.imread('shape.jpg')  
+	imgContour = img.copy()  
+	# img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  
+	canny = cv2.Canny(img, 100, 200)  
+	# 轮廓检测  
+	# 参数：图片 检测模式（外轮廓、内轮廓。。） 近似方法  
+	# 返回参数：轮廓 阶层  
+	contours, hierarchy = cv2.findContours(canny, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)  
+	  
+	# 把轮廓画出来  
+	for cnt in contours:  
+	    #     # 参数：图片 图廓点 画的轮廓数量 颜色 宽度  
+	 cv2.drawContours(imgContour, cnt, -1, (255, 0, 0), 4)  
+	    # 轮廓面积  
+	 area = cv2.contourArea(cnt)  
+	    # 通过面积大小来过滤噪点 面积大于 500 对轮廓进行近似  
+	 if area &gt; 500:  
+	        # 轮廓边长  
+	 peri = cv2.arcLength(cnt, True)  
+	        # 轮廓近似成图形  
+	 # 输入参数：轮廓 近似值 是否是封闭图形  
+	 # 输出参数：近似图形的顶点  
+	 vertices = cv2.approxPolyDP(cnt, peri * 0.02, True)  
+	        # 近似轮廓顶点  
+	 corners = len(vertices)  
+	        # print(vertices)  
+	 # 对每个轮廓生成外接矩形  
+	 # 输出参数：需要生成外接矩形的轮廓  
+	 # 输出参数：左上角x坐标 左上角y坐标 宽度 高度  
+	 x, y, w, h = cv2.boundingRect(vertices)  
+	        # 在图片中画出外接矩形  
+	 # 输入参数：图片 左上角顶点坐标 右下角顶点坐标 颜色 宽度  
+	 cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 4)  
+	  
+	        # 通过近似轮廓有几个顶点判断轮廓的形状  
+	 if corners == 3:  
+	            cv2.putText(imgContour, 'Triangle', (x, y - 5), cv2.FONT_ITALIC, 1, (0, 0, 255), 2)  
+	  
+	        if corners == 4:  
+	            cv2.putText(imgContour, 'Rectangle', (x, y - 5), cv2.FONT_ITALIC, 1, (0, 0, 255), 2)  
+	  
+	        if corners == 5:  
+	            cv2.putText(imgContour, 'Pentagon', (x, y - 5), cv2.FONT_ITALIC, 1, (0, 0, 255), 2)  
+	  
+	        if corners &gt; 5:  
+	            cv2.putText(imgContour, 'Circle', (x, y - 5), cv2.FONT_ITALIC, 1, (0, 0, 255), 2)  
+	cv2.imshow('img', img)  
+	cv2.imshow('canny', canny)  
+	cv2.imshow('imgContour', imgContour)  
+	cv2.waitKey(0)
+</code></pre><h3 id="人脸识别">人脸识别<a hidden class="anchor" aria-hidden="true" href="#人脸识别">#</a></h3>
+<pre tabindex="0"><code>	import cv2  
+  
+	img = cv2.imread('lenna.jpg')  
+	# 彩色图片转灰度图片  
+	gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  
+	# 导入Cascade分类器  
+	# face_detect.xml 为opencv 已经训练好的模型  
+	faceCascade = cv2.CascadeClassifier('face_detect.xml')  
+	# 输入参数：图片 在多次全局搜索中图片缩小的笔记，即尺度放大的比例 最大化抑制的次数，人脸被选中三次以上才判断为人脸  
+	faceRect = faceCascade.detectMultiScale(gray, 1.1, 3)  
+	print(len(faceRect))  
+	for (x, y, w, h) in faceRect:  
+	    cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)  
+	  
+	cv2.imshow('img', img)  
+	cv2.waitKey(0)
+
+</code></pre><h3 id="project">project<a hidden class="anchor" aria-hidden="true" href="#project">#</a></h3>
+<ul>
+<li>通过镜头获取画面</li>
+<li>手拿笔在镜头中运动</li>
+<li>在窗口中标记笔的运动轨迹</li>
+<li>对于多支笔的轨迹，通过不同颜色标记出来</li>
+</ul>
+<pre tabindex="0"><code>	import cv2  
+	import numpy as np  
+	  
+	video = cv2.VideoCapture(0)  
+	# [x,y,c]  
+	drawPoints = []  
+	  
+	  
+	def findPen(img):  
+	    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)  
+	    lower = np.array([28, 35, 83])  
+	    upper = np.array([55, 255, 232])  
+	  
+	    mask = cv2.inRange(hsv, lower, upper)  
+	    result = cv2.bitwise_and(img, img, mask=mask)  
+	  
+	    penx, peny = findContour(mask)  
+	    cv2.circle(imgContour, (penx, peny), 5, (0, 0, 255), cv2.FILLED)  
+	  
+	    if peny != -1:  
+	        drawPoints.append([penx, peny])  
+	    # cv2.imshow('result', result)  
+	  
+	  
+	def findContour(img):  
+	    # 轮廓检测  
+	 # 参数：图片 检测模式（外轮廓、内轮廓。。） 近似方法  
+	 # 返回参数：轮廓 阶层  
+	 contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)  
+	    x, y, w, h = 0, 0, 0, 0  
+	 # 把轮廓画出来  
+	 for cnt in contours:  
+	        #     # 参数：图片 图廓点 画的轮廓数量 颜色 宽度  
+	 # cv2.drawContours(imgContour, cnt, -1, (255, 0, 0), 4)  
+	 # 轮廓面积  
+	 area = cv2.contourArea(cnt)  
+	        # 通过面积大小来过滤噪点 面积大于 500 对轮廓进行近似  
+	 if area &gt; 500:  
+	            # 轮廓边长  
+	 peri = cv2.arcLength(cnt, True)  
+	            # 轮廓近似成图形  
+	 # 输入参数：轮廓 近似值 是否是封闭图形  
+	 # 输出参数：近似图形的顶点  
+	 vertices = cv2.approxPolyDP(cnt, peri * 0.02, True)  
+	            # print(vertices)  
+	 # 对每个轮廓生成外接矩形  
+	 # 输出参数：需要生成外接矩形的轮廓  
+	 # 输出参数：左上角x坐标 左上角y坐标 宽度 高度  
+	 x, y, w, h = cv2.boundingRect(vertices)  
+	    return x + w // 2, y + h // 2  
+	  
+	  
+	def draw(drawPoints):  
+	    for point in drawPoints:  
+	        cv2.circle(imgContour, (point[0], point[1]), 5, (0, 0, 255), cv2.FILLED)  
+	  
+	  
+	while True:  
+	    ret, frame = video.read()  
+	  
+	    if ret:  
+	        cv2.imshow('video', frame)  
+	        imgContour = frame.copy()  
+	        findPen(frame)  
+	        draw(drawPoints)  
+	        cv2.imshow('contour', imgContour)  
+	    else:  
+	        break  
+	 if cv2.waitKey(1) == ord('q'):  
+	        break
 </code></pre>
 
   </div>

@@ -9,16 +9,7 @@
       <link>https://luoshuiai.github.io/Luoshuiai/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 23 Feb 2022 22:50:19 +0800</lastBuildDate><atom:link href="https://luoshuiai.github.io/Luoshuiai/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>{{value}}</title>
-      <link>https://luoshuiai.github.io/Luoshuiai/categories/value/</link>
-      <pubDate>Wed, 23 Feb 2022 22:50:19 +0800</pubDate>
-      
-      <guid>https://luoshuiai.github.io/Luoshuiai/categories/value/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 23 Feb 2022 17:23:18 +0800</lastBuildDate><atom:link href="https://luoshuiai.github.io/Luoshuiai/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>机器视觉</title>
       <link>https://luoshuiai.github.io/Luoshuiai/categories/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/</link>
