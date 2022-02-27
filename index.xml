@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>FeiHuaLianPian</title>
-    <link>https://fhlp.me/%22/</link>
+    <link>https://luoshuiai.github.io/Luoshuiai/</link>
     <description>Recent content on FeiHuaLianPian</description>
     <image>
-      <url>https://fhlp.me/%22/papermod-cover.png</url>
-      <link>https://fhlp.me/%22/papermod-cover.png</link>
+      <url>https://luoshuiai.github.io/Luoshuiai/papermod-cover.png</url>
+      <link>https://luoshuiai.github.io/Luoshuiai/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 23 Feb 2022 22:50:19 +0800</lastBuildDate><atom:link href="https://fhlp.me/%22/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 22:50:19 +0800</lastBuildDate><atom:link href="https://luoshuiai.github.io/Luoshuiai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python的opencv入门</title>
-      <link>https://fhlp.me/%22/post/python%E7%9A%84opencv%E5%85%A5%E9%97%A8/</link>
+      <link>https://luoshuiai.github.io/Luoshuiai/post/python%E7%9A%84opencv%E5%85%A5%E9%97%A8/</link>
       <pubDate>Wed, 23 Feb 2022 22:50:19 +0800</pubDate>
       
-      <guid>https://fhlp.me/%22/post/python%E7%9A%84opencv%E5%85%A5%E9%97%A8/</guid>
+      <guid>https://luoshuiai.github.io/Luoshuiai/post/python%E7%9A%84opencv%E5%85%A5%E9%97%A8/</guid>
       <description>读取图片 	cv2.imread(&#39;&#39;,img) 改变图片大小  cv2.resize(img, (300,300)) cv2.resize(img, (0,0),fx=0.5,fy=0.5) fx,fy 缩放倍数 读取视频 	# 读取已经保存的视频 cv2.VideoCapture(&#39;voideo.mp4&#39;) # 读取镜头视频，通过编号选择镜头 # 假设笔记本有两个镜头，那么电脑自带镜头编号0，外接镜头编号1 cap = cv2.VideoCapture(1) # 逐帧显示视频 while Ture: # 读取下一帧 ret,frame=cap.read() # ret 取得下一帧是否成功 # frame 取得的下一帧 # 判断视频帧是否读取成功 if ret: # 把每帧的图像缩放0.4倍 frame = cv2.resize(frame,(0,0),fx=0.4,fy=0.4) cv2.imshow(&#39;video&#39;,frame) else: break # 每个十毫秒显示一帧视频，等待中按 q 中止播放 if cv2.waitkey(10) == ord(&#39;q&#39;): break numpy 与图片的关系 打印一张图片的类型
 	print(img) print(type(img)) print(img.shape) 输出： # 输出图片的详细数据 [[[255 255 255] [255 255 255] [255 255 255] .</description>
     </item>
     
     <item>
       <title>机器视觉</title>
-      <link>https://fhlp.me/%22/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/</link>
+      <link>https://luoshuiai.github.io/Luoshuiai/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/</link>
       <pubDate>Wed, 23 Feb 2022 17:23:18 +0800</pubDate>
       
-      <guid>https://fhlp.me/%22/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/</guid>
+      <guid>https://luoshuiai.github.io/Luoshuiai/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Convolutions</title>
-      <link>https://fhlp.me/%22/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/convolutions/</link>
+      <link>https://luoshuiai.github.io/Luoshuiai/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/convolutions/</link>
       <pubDate>Wed, 23 Feb 2022 11:43:48 +0800</pubDate>
       
-      <guid>https://fhlp.me/%22/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/convolutions/</guid>
+      <guid>https://luoshuiai.github.io/Luoshuiai/post/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/convolutions/</guid>
       <description>默认描述机器视觉中的概念。
 卷积  卷积的目的是什么？→提取图像特征，去除噪点 卷积是什么？→把当前点和周围点加权平均 卷积计算公式：$$(𝑓 ∗ 𝑔)[𝑚, 𝑛] = \sum_{k,l} 𝑓[𝑚 − 𝑘, 𝑛 − 𝑙]𝑔[𝑘, 𝑙]$$  卷积核  卷积核是什么？→当前点与周围点加权平均的权值 如何进行卷积？  对卷积核进行翻转 ⇒ 把卷积核放入图像中  把卷积核中各个点与在图像中对应点加权求和，得到中间点 e 的值 卷积核平移、下滑，对所有点进行卷积运算    卷积的特性  线性：分开求和与组合求和结果不变  Linearity: filter(f1 + f2) = filter(f1) + filter(f2)   平移不变性：先卷积再平移与先平移再卷积结果不变  Shift invariance: same behavior regardless of pixel location: filter(shift(f)) = shift(filter(f)) 结论：任何平移不变的操作都能用卷积来表示  Theoretical result: any linear shift-invariant operator can be r epresented as a convolution 图像向左平移一个像素         交换律  Commutative: $a * b = b * a$ Conceptually no difference between filter and signal   结合律  Associative: $a * (b * c) = (a * b) * c$ Often apply several filters one after another: $(((a * b1) * b2) * b3)$ This is equivalent to applying one filter: $a * (b1 * b2 * b3)$   分配律  Distributes over addition: $a * (b + c) = (a * b) + (a * c)$ Scalars factor out: $ka * b = a * kb = k (a * b)$ Identity: unit impulse $e = […, 0, 0, 1, 0, 0, …],a * e = a$    卷积为什么要翻转  模板不反转称为相关 在实际使用中，很多模板都是对称的，并不强调翻转 数学中卷积，主要是为了诸如信号处理、求两个随机变量和的分布等而定义的运算，所以需要“翻转”是根据问题的需要而确定的 卷积神经网络中“卷积”，是为了提取图像的特征，其实只借鉴了“加权求和”的特点 还有一点一定要说的是：数学中的“卷积核”都是已知的或者给定的，卷积神经网络中“卷积核”本来就是trainable的参数，不是给定的，根据数据训练学习的，那么翻不翻转还有什么关系呢？因为无论翻转与否对应的都是未知参数！ 二维卷积在图像处理中的应用就是为了提取特征，如高通滤波器提取边缘特征可以看作是一种局部特征提取，低通滤波器进行去噪平滑可以看作是一种全局特征提取，而在神经网络中对于一个图像的分类任务来说，我们并不清楚图像中哪一部位应该提取全局特征还是局部特征，因此卷积核就变成了可训练的参数，根据误差函数来确定哪一部位应该提取哪一种特征，这就是神经网络中卷积核之所以为参数的本质，以结果为导向，而不像数学中的卷积有明确的目标。  存在的问题  卷积存在的问题→对原图像进行卷积，卷积图像会比原图像小一圈     如何保证卷积图像和原图像一样大小?</description>
     </item>

@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://fhlp.me/%22/sitemap.xml
+Sitemap: https://luoshuiai.github.io/Luoshuiai/sitemap.xml
