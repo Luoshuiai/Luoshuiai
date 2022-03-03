@@ -3,10 +3,10 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
-<title>PKM | FHLP</title><meta name=keywords content>
+<title>Read | FHLP</title><meta name=keywords content>
 <meta name=description content>
 <meta name=author content="废话">
-<link rel=canonical href=https://fhlp.me/categories/pkm/>
+<link rel=canonical href=https://fhlp.me/categories/read/>
 <link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://fhlp.me/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://fhlp.me/favicon-16x16.png>
@@ -15,20 +15,20 @@
 <link rel=mask-icon href=https://fhlp.me/safari-pinned-tab.svg>
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
-<link rel=alternate type=application/rss+xml href=https://fhlp.me/categories/pkm/index.xml>
+<link rel=alternate type=application/rss+xml href=https://fhlp.me/categories/read/index.xml>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=manifest href=/site.webmanifest>
 <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
-<meta property="og:title" content="PKM">
+<meta property="og:title" content="Read">
 <meta property="og:description" content>
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://fhlp.me/categories/pkm/"><meta property="og:image" content="https://fhlp.me/fhlp.png">
+<meta property="og:url" content="https://fhlp.me/categories/read/"><meta property="og:image" content="https://fhlp.me/fhlp.png">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://fhlp.me/fhlp.png">
-<meta name=twitter:title content="PKM">
+<meta name=twitter:title content="Read">
 <meta name=twitter:description content>
 </head><body class=list id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script>
@@ -63,46 +63,67 @@
 </a>
 </li></ul></nav></header><main class=main>
 <header class=page-header>
-<h1>PKM</h1></header><article class="post-entry tag-entry">
+<h1>Read</h1></header><article class="post-entry tag-entry">
 <header class=entry-header>
-<h2>网页知识库的搭建
+<h2>处理一本书的流程
 </h2></header><section class=entry-content>
-<p> 起因 想要建立自己的一个知识库，离线保存有价值网页内容 小众软件中的讨论，参见评论 保存手段 保存为html
-插件 singlefile 插件 save page we 保存为PDF
-插件 简悦 插件 adobe acrobat 考虑要素 管理软件 存储在 zotero 中 开源软件 多平台 搜索方式 zotero 支持 PDF内搜索 避免使用使用第三方搜索（anytext、filelocator）检索 html 存储 zotero 支持 webdav 同步 相关笔记 [[需要一个网页管理软件]] </p></section><footer class=entry-footer><div class=mb-3>
-<i class="far fa-calendar-alt"></i>&nbsp;March 3, 2022&nbsp;|&nbsp;
+<p>理论 知识模块=知识结构+知识点 数据库=字段+值 工具 知网词典、术语在线->查询词语的准确性 流程 获取元数据（metadata） 在读秀、万方获取元信息，在emeditor中编写统一的脚本，进行处理 可以将这些数据做成自己的一个书藉库
+图片转文字处理 ABBYY FineReaderOCR. exe 主程序、FineReader. exe PDF 阅读+处理程序、HotFolder. exe 企业级批量 OCR、ScreenshotReader. exe PC 桌面 OCR
+字体，正文一般是方正书宋体
+预处理选项
+![Pasted image 20210831174245.png](C:\Users\luo\OneDrive\hugo website\废话连篇\content\posts\Read\Pasted image 20210831174245.png)
+高级玩法，自己设置字符集
+HT只需要4-8cpu，10G内存，可以用虚拟机来运行 PDF保存设置
+文本处理 [[emeditor]] 处理文本 通过字符数字+非句末标点，去模糊性定位章节 如果可以找到文字性材料，一定要是aw3格式，不是epub格式（epub格式很可能是后边人制作的，不是出版社制作的） sigil，快速查看epub格式 html格式可以直接导入sm中 这个结构就是为了处理前备知识不足的问题 属于增量阅读的变种用法 我们先想想,处理书籍的时候,最核心的一点就在于《名词的积累》 名词,可以展开这个名词的属性(可以往知识图谱这个结构走) 所以,这块儿属于读书的核心,很多书,读不下去,第一关就是词汇量的问题 特别是某个,陌生领域,陌生的词汇,这个词汇不解决,你后续一堆的问题。 处理词汇的办法有好几个 常见的自动化处理,就是分词 术语名词处理 自动化分词处理：[[hanlp]] 理解一段话，一篇文章，最终要的是搞懂其中名词的含义，NPL 可以快速判断其中的名词，然后可以挑选出来，快速查找意思 </p></section><footer class=entry-footer><div class=mb-3>
+<i class="far fa-calendar-alt"></i>&nbsp;November 24, 2021&nbsp;|&nbsp;
 <i class="fa fa-folder-open" title=Categories aria-hidden=true></i>&nbsp;
-<a href=/categories/pkm/>PKM</a>
+<a href=/categories/read/>Read</a>
 &nbsp;|&nbsp;
 <i class="fa fa-tags" title=Tags aria-hidden=true></i>&nbsp;
-<a href=/tags/zotero/>zotero</a>
 &nbsp;|&nbsp;
 <i class="fa fa-book" title=Series aria-hidden=true></i>&nbsp;
-<a href=/series/%E7%BD%91%E9%A1%B5%E7%9F%A5%E8%AF%86%E5%BA%93/>网页知识库</a>
+<a href=/series/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/>如何阅读一本书</a>
 <br>
 &nbsp;|&nbsp;1 min
 &nbsp;|&nbsp;
 废话
-</div></footer><a class=entry-link aria-label="post link to 网页知识库的搭建" href=https://fhlp.me/posts/pkm/%E7%BD%91%E9%A1%B5%E7%9F%A5%E8%AF%86%E5%BA%93%E7%9A%84%E6%90%AD%E5%BB%BA/></a>
+</div></footer><a class=entry-link aria-label="post link to 处理一本书的流程" href=https://fhlp.me/posts/read/%E5%A4%84%E7%90%86%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/></a>
 </article><article class="post-entry tag-entry">
 <header class=entry-header>
-<h2>需要一个网页管理软件
+<h2>阅读与名词障碍
 </h2></header><section class=entry-content>
-<p>需求 一定要有 开箱即用 保存有价值的网页 图形化界面方便操作 自定义分类类别 本地离线化、第三方同步 可以有 知识共享 可以添加笔记 满足需求的产品及存在缺点 zotero 个人库无法共享 团队库储存收费 obsidian 本地功能简单 实现想要的功能需要付出大量时间 相关笔记 [[网页知识库的搭建]]</p></section><footer class=entry-footer><div class=mb-3>
-<i class="far fa-calendar-alt"></i>&nbsp;March 2, 2022&nbsp;|&nbsp;
+<p> 书籍的内容是各种[[词语]]的组合 通过小学初中高中语文的锻炼，我们掌握了词语和语法，能够熟练阅读理解各种文章 在我们阅读新知识的过程中，对我们阻碍最大的是实词中的名词，因为名词的数量巨大而且在不停的创造和增加，相比而言其他实词与虚词早已固定不会有过多的变化 阅读文章的过程就是把各种不认识名词串联理解的过程 所以，问题的关键，如何克服阅读过程中的名词障碍？？？ </p></section><footer class=entry-footer><div class=mb-3>
+<i class="far fa-calendar-alt"></i>&nbsp;November 23, 2021&nbsp;|&nbsp;
 <i class="fa fa-folder-open" title=Categories aria-hidden=true></i>&nbsp;
-<a href=/categories/pkm/>PKM</a>
+<a href=/categories/read/>Read</a>
 &nbsp;|&nbsp;
 <i class="fa fa-tags" title=Tags aria-hidden=true></i>&nbsp;
-<a href=/tags/zotero/>zotero</a>
 &nbsp;|&nbsp;
 <i class="fa fa-book" title=Series aria-hidden=true></i>&nbsp;
-<a href=/series/%E7%BD%91%E9%A1%B5%E7%9F%A5%E8%AF%86%E5%BA%93/>网页知识库</a>
+<a href=/series/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/>如何阅读一本书</a>
 <br>
 &nbsp;|&nbsp;1 min
 &nbsp;|&nbsp;
 废话
-</div></footer><a class=entry-link aria-label="post link to 需要一个网页管理软件" href=https://fhlp.me/posts/pkm/%E9%9C%80%E8%A6%81%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6/></a>
+</div></footer><a class=entry-link aria-label="post link to 阅读与名词障碍" href=https://fhlp.me/posts/read/%E9%98%85%E8%AF%BB%E4%B8%8E%E5%90%8D%E8%AF%8D%E9%9A%9C%E7%A2%8D/></a>
+</article><article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>阅读一本书的流程
+</h2></header><section class=entry-content>
+<p>阅读的困难 阅读的困难在于如何克服 [[阅读与名词障碍]] 所以阅读的最大障碍，如何解决术语名词的理解问题 如何解决困难 对书籍进行预处理，提取出关键术语，参考：[[处理一本书的流程]] 对关键术语进行双链引用 阅读的流程 获取书籍的关键知识点词汇及前置知识 查阅书籍的知识结构 阅读及制卡复习 </p></section><footer class=entry-footer><div class=mb-3>
+<i class="far fa-calendar-alt"></i>&nbsp;November 22, 2021&nbsp;|&nbsp;
+<i class="fa fa-folder-open" title=Categories aria-hidden=true></i>&nbsp;
+<a href=/categories/read/>Read</a>
+&nbsp;|&nbsp;
+<i class="fa fa-tags" title=Tags aria-hidden=true></i>&nbsp;
+&nbsp;|&nbsp;
+<i class="fa fa-book" title=Series aria-hidden=true></i>&nbsp;
+<a href=/series/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/>如何阅读一本书</a>
+<br>
+&nbsp;|&nbsp;1 min
+&nbsp;|&nbsp;
+废话
+</div></footer><a class=entry-link aria-label="post link to 阅读一本书的流程" href=https://fhlp.me/posts/read/%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/></a>
 </article></main><footer class=footer>
 <span>&copy; 2022 <a href=https://fhlp.me/>FHLP</a></span>
 <span>
