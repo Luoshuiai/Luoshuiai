@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>网页知识库 on FHLP</title>
+    <link>https://fhlp.me/series/%E7%BD%91%E9%A1%B5%E7%9F%A5%E8%AF%86%E5%BA%93/</link>
+    <description>Recent content in 网页知识库 on FHLP</description>
+    <image>
+      <url>https://fhlp.me/fhlp.png</url>
+      <link>https://fhlp.me/fhlp.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 03 Mar 2022 16:00:56 +0800</lastBuildDate><atom:link href="https://fhlp.me/series/%E7%BD%91%E9%A1%B5%E7%9F%A5%E8%AF%86%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网页知识库的搭建</title>
+      <link>https://fhlp.me/posts/pkm/%E7%BD%91%E9%A1%B5%E7%9F%A5%E8%AF%86%E5%BA%93%E7%9A%84%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Thu, 03 Mar 2022 16:00:56 +0800</pubDate>
+      
+      <guid>https://fhlp.me/posts/pkm/%E7%BD%91%E9%A1%B5%E7%9F%A5%E8%AF%86%E5%BA%93%E7%9A%84%E6%90%AD%E5%BB%BA/</guid>
+      <description> 起因  想要建立自己的一个知识库，离线保存有价值网页内容 小众软件中的讨论，参见评论  保存手段   保存为html
+ 插件 singlefile 插件 save page we    保存为PDF
+ 插件 简悦 插件 adobe acrobat    考虑要素  管理软件  存储在 zotero 中 开源软件 多平台   搜索方式  zotero 支持 PDF内搜索 避免使用使用第三方搜索（anytext、filelocator）检索 html   存储  zotero 支持 webdav 同步     相关笔记  [[需要一个网页管理软件]]  </description>
+    </item>
+    
+    <item>
+      <title>需要一个网页管理软件</title>
+      <link>https://fhlp.me/posts/pkm/%E9%9C%80%E8%A6%81%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Wed, 02 Mar 2022 10:07:51 +0800</pubDate>
+      
+      <guid>https://fhlp.me/posts/pkm/%E9%9C%80%E8%A6%81%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6/</guid>
+      <description>需求 一定要有  开箱即用 保存有价值的网页 图形化界面方便操作 自定义分类类别 本地离线化、第三方同步  可以有  知识共享 可以添加笔记  满足需求的产品及存在缺点  zotero  个人库无法共享 团队库储存收费   obsidian  本地功能简单 实现想要的功能需要付出大量时间     相关笔记 [[网页知识库的搭建]]</description>
+    </item>
+    
+  </channel>
+</rss>
