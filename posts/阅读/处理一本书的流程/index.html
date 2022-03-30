@@ -1,0 +1,197 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>处理一本书的流程 | FHLP</title><meta name=keywords content>
+<meta name=description content="理论  知识模块=知识结构+知识点 数据库=字段+值  工具  知网词典、术语在线->查询词语的准确性  流程 获取元数据（metadata） 在读秀、万方获取元信息，在emeditor中编写统一的脚本，进行处理 可以将这些数据做成自己的一个书藉库
+图片转文字处理   ABBYY FineReaderOCR. exe 主程序、FineReader. exe PDF 阅读+处理程序、HotFolder. exe 企业级批量 OCR、ScreenshotReader. exe PC 桌面 OCR
+    字体，正文一般是方正书宋体
+    预处理选项
+  ![Pasted image 20210831174245.png](./处理一本书的流程/Pasted image 20210831174245.png)
+      高级玩法，自己设置字符集
+ HT只需要4-8cpu，10G内存，可以用虚拟机来运行    PDF保存设置
+    文本处理  [[emeditor]] 处理文本  通过字符数字+非句末标点，去模糊性定位章节 如果可以找到文字性材料，一定要是aw3格式，不是epub格式（epub格式很可能是后边人制作的，不是出版社制作的） sigil，快速查看epub格式 html格式可以直接导入sm中 这个结构就是为了处理前备知识不足的问题 属于增量阅读的变种用法 我们先想想,处理书籍的时候,最核心的一点就在于《名词的积累》 名词,可以展开这个名词的属性(可以往知识图谱这个结构走) 所以,这块儿属于读书的核心,很多书,读不下去,第一关就是词汇量的问题 特别是某个,陌生领域,陌生的词汇,这个词汇不解决,你后续一堆的问题。 处理词汇的办法有好几个 常见的自动化处理,就是分词    术语名词处理  自动化分词处理：[[hanlp]] 理解一段话，一篇文章，最终要的是搞懂其中名词的含义，NPL 可以快速判断其中的名词，然后可以挑选出来，快速查找意思  ">
+<meta name=author content="废话">
+<link rel=canonical href=https://fhlp.me/posts/%E9%98%85%E8%AF%BB/%E5%A4%84%E7%90%86%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.4dcb3c4f38462f66c6b6137227726f5543cb934cca9788f041c087e374491df2.js integrity="sha256-Tcs8TzhGL2bGthNyJ3JvVUPLk0zKl4jwQcCH43RJHfI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://fhlp.me/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://fhlp.me/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://fhlp.me/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://fhlp.me/apple-touch-icon.png>
+<link rel=mask-icon href=https://fhlp.me/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/site.webmanifest>
+<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous>
+<meta property="og:title" content="处理一本书的流程">
+<meta property="og:description" content="理论  知识模块=知识结构+知识点 数据库=字段+值  工具  知网词典、术语在线->查询词语的准确性  流程 获取元数据（metadata） 在读秀、万方获取元信息，在emeditor中编写统一的脚本，进行处理 可以将这些数据做成自己的一个书藉库
+图片转文字处理   ABBYY FineReaderOCR. exe 主程序、FineReader. exe PDF 阅读+处理程序、HotFolder. exe 企业级批量 OCR、ScreenshotReader. exe PC 桌面 OCR
+    字体，正文一般是方正书宋体
+    预处理选项
+  ![Pasted image 20210831174245.png](./处理一本书的流程/Pasted image 20210831174245.png)
+      高级玩法，自己设置字符集
+ HT只需要4-8cpu，10G内存，可以用虚拟机来运行    PDF保存设置
+    文本处理  [[emeditor]] 处理文本  通过字符数字+非句末标点，去模糊性定位章节 如果可以找到文字性材料，一定要是aw3格式，不是epub格式（epub格式很可能是后边人制作的，不是出版社制作的） sigil，快速查看epub格式 html格式可以直接导入sm中 这个结构就是为了处理前备知识不足的问题 属于增量阅读的变种用法 我们先想想,处理书籍的时候,最核心的一点就在于《名词的积累》 名词,可以展开这个名词的属性(可以往知识图谱这个结构走) 所以,这块儿属于读书的核心,很多书,读不下去,第一关就是词汇量的问题 特别是某个,陌生领域,陌生的词汇,这个词汇不解决,你后续一堆的问题。 处理词汇的办法有好几个 常见的自动化处理,就是分词    术语名词处理  自动化分词处理：[[hanlp]] 理解一段话，一篇文章，最终要的是搞懂其中名词的含义，NPL 可以快速判断其中的名词，然后可以挑选出来，快速查找意思  ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fhlp.me/posts/%E9%98%85%E8%AF%BB/%E5%A4%84%E7%90%86%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/"><meta property="og:image" content="https://fhlp.me/fhlp.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-11-24T00:00:00+08:00">
+<meta property="article:modified_time" content="2021-11-24T00:00:00+08:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://fhlp.me/fhlp.png">
+<meta name=twitter:title content="处理一本书的流程">
+<meta name=twitter:description content="理论  知识模块=知识结构+知识点 数据库=字段+值  工具  知网词典、术语在线->查询词语的准确性  流程 获取元数据（metadata） 在读秀、万方获取元信息，在emeditor中编写统一的脚本，进行处理 可以将这些数据做成自己的一个书藉库
+图片转文字处理   ABBYY FineReaderOCR. exe 主程序、FineReader. exe PDF 阅读+处理程序、HotFolder. exe 企业级批量 OCR、ScreenshotReader. exe PC 桌面 OCR
+    字体，正文一般是方正书宋体
+    预处理选项
+  ![Pasted image 20210831174245.png](./处理一本书的流程/Pasted image 20210831174245.png)
+      高级玩法，自己设置字符集
+ HT只需要4-8cpu，10G内存，可以用虚拟机来运行    PDF保存设置
+    文本处理  [[emeditor]] 处理文本  通过字符数字+非句末标点，去模糊性定位章节 如果可以找到文字性材料，一定要是aw3格式，不是epub格式（epub格式很可能是后边人制作的，不是出版社制作的） sigil，快速查看epub格式 html格式可以直接导入sm中 这个结构就是为了处理前备知识不足的问题 属于增量阅读的变种用法 我们先想想,处理书籍的时候,最核心的一点就在于《名词的积累》 名词,可以展开这个名词的属性(可以往知识图谱这个结构走) 所以,这块儿属于读书的核心,很多书,读不下去,第一关就是词汇量的问题 特别是某个,陌生领域,陌生的词汇,这个词汇不解决,你后续一堆的问题。 处理词汇的办法有好几个 常见的自动化处理,就是分词    术语名词处理  自动化分词处理：[[hanlp]] 理解一段话，一篇文章，最终要的是搞懂其中名词的含义，NPL 可以快速判断其中的名词，然后可以挑选出来，快速查找意思  ">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://fhlp.me/posts/"},{"@type":"ListItem","position":2,"name":"处理一本书的流程","item":"https://fhlp.me/posts/%E9%98%85%E8%AF%BB/%E5%A4%84%E7%90%86%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"处理一本书的流程","name":"处理一本书的流程","description":"理论  知识模块=知识结构+知识点 数据库=字段+值  工具  知网词典、术语在线-\u0026gt;查询词语的准确性  流程 获取元数据（metadata） 在读秀、万方获取元信息，在emeditor中编写统一的脚本，进行处理 可以将这些数据做成自己的一个书藉库\n图片转文字处理   ABBYY FineReaderOCR. exe 主程序、FineReader. exe PDF 阅读+处理程序、HotFolder. exe 企业级批量 OCR、ScreenshotReader. exe PC 桌面 OCR\n    字体，正文一般是方正书宋体\n    预处理选项\n  ![Pasted image 20210831174245.png](./处理一本书的流程/Pasted image 20210831174245.png)\n      高级玩法，自己设置字符集\n HT只需要4-8cpu，10G内存，可以用虚拟机来运行    PDF保存设置\n    文本处理  [[emeditor]] 处理文本  通过字符数字+非句末标点，去模糊性定位章节 如果可以找到文字性材料，一定要是aw3格式，不是epub格式（epub格式很可能是后边人制作的，不是出版社制作的） sigil，快速查看epub格式 html格式可以直接导入sm中 这个结构就是为了处理前备知识不足的问题 属于增量阅读的变种用法 我们先想想,处理书籍的时候,最核心的一点就在于《名词的积累》 名词,可以展开这个名词的属性(可以往知识图谱这个结构走) 所以,这块儿属于读书的核心,很多书,读不下去,第一关就是词汇量的问题 特别是某个,陌生领域,陌生的词汇,这个词汇不解决,你后续一堆的问题。 处理词汇的办法有好几个 常见的自动化处理,就是分词    术语名词处理  自动化分词处理：[[hanlp]] 理解一段话，一篇文章，最终要的是搞懂其中名词的含义，NPL 可以快速判断其中的名词，然后可以挑选出来，快速查找意思  ","keywords":[],"articleBody":"理论  知识模块=知识结构+知识点 数据库=字段+值  工具  知网词典、术语在线-查询词语的准确性  流程 获取元数据（metadata） 在读秀、万方获取元信息，在emeditor中编写统一的脚本，进行处理 可以将这些数据做成自己的一个书藉库\n图片转文字处理   ABBYY FineReaderOCR. exe 主程序、FineReader. exe PDF 阅读+处理程序、HotFolder. exe 企业级批量 OCR、ScreenshotReader. exe PC 桌面 OCR\n    字体，正文一般是方正书宋体\n    预处理选项\n  ![Pasted image 20210831174245.png](./处理一本书的流程/Pasted image 20210831174245.png)\n      高级玩法，自己设置字符集\n HT只需要4-8cpu，10G内存，可以用虚拟机来运行    PDF保存设置\n    文本处理  [[emeditor]] 处理文本  通过字符数字+非句末标点，去模糊性定位章节 如果可以找到文字性材料，一定要是aw3格式，不是epub格式（epub格式很可能是后边人制作的，不是出版社制作的） sigil，快速查看epub格式 html格式可以直接导入sm中 这个结构就是为了处理前备知识不足的问题 属于增量阅读的变种用法 我们先想想,处理书籍的时候,最核心的一点就在于《名词的积累》 名词,可以展开这个名词的属性(可以往知识图谱这个结构走) 所以,这块儿属于读书的核心,很多书,读不下去,第一关就是词汇量的问题 特别是某个,陌生领域,陌生的词汇,这个词汇不解决,你后续一堆的问题。 处理词汇的办法有好几个 常见的自动化处理,就是分词    术语名词处理  自动化分词处理：[[hanlp]] 理解一段话，一篇文章，最终要的是搞懂其中名词的含义，NPL 可以快速判断其中的名词，然后可以挑选出来，快速查找意思  ","wordCount":"53","inLanguage":"en","datePublished":"2021-11-24T00:00:00+08:00","dateModified":"2021-11-24T00:00:00+08:00","author":{"@type":"Person","name":"废话"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://fhlp.me/posts/%E9%98%85%E8%AF%BB/%E5%A4%84%E7%90%86%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/"},"publisher":{"@type":"Organization","name":"FHLP","logo":{"@type":"ImageObject","url":"https://fhlp.me/favicon.ico"}}}</script>
+</head><body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://fhlp.me/ accesskey=h title="FHLP (Alt + H)">FHLP</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div><ul id=menu>
+<li>
+<a href=https://fhlp.me/archives/ title=Archive>
+<span>Archive</span>
+</a>
+</li><li>
+<a href=https://fhlp.me/search/ title=🔍>
+<span>🔍</span>
+</a>
+</li><li>
+<a href=https://fhlp.me/categories title=Categories>
+<span>Categories</span>
+</a>
+</li><li>
+<a href=https://fhlp.me/tags title=Tags>
+<span>Tags</span>
+</a>
+</li><li>
+<a href=https://fhlp.me/series title=Series>
+<span>Series</span>
+</a>
+</li></ul></nav></header><main class=main>
+<article class=post-single>
+<header class=post-header>
+<h1 class=post-title>
+处理一本书的流程
+</h1><div class=post-meta><div class=mb-3>
+<i class="far fa-calendar-alt"></i>&nbsp;November 24, 2021&nbsp;|&nbsp;
+<i class="fa fa-folder-open" title=Categories aria-hidden=true></i>&nbsp;
+<a href=/categories/read/>read</a>
+&nbsp;|&nbsp;
+<i class="fa fa-tags" title=Tags aria-hidden=true></i>&nbsp;
+&nbsp;|&nbsp;
+<i class="fa fa-book" title=Series aria-hidden=true></i>&nbsp;
+<a href=/series/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/>如何阅读一本书</a>
+<br>
+&nbsp;|&nbsp;1 min
+&nbsp;|&nbsp;
+废话
+</div></div></header><div class=toc>
+<ol class=toc-content>
+<li class=toc-li>
+<a href=https://fhlp.me/posts/%E9%98%85%E8%AF%BB/%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/>阅读一本书的流程</a>
+</li><li class=toc-li>
+<a href=https://fhlp.me/posts/%E9%98%85%E8%AF%BB/%E5%A4%84%E7%90%86%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/%E9%98%85%E8%AF%BB%E4%B8%8E%E5%90%8D%E8%AF%8D%E9%9A%9C%E7%A2%8D/>阅读与名词障碍</a>
+</li><li class=toc-li>
+处理一本书的流程
+</li></ol></div><div class=toc>
+<details>
+<summary accesskey=c title="(Alt + C)">
+<span class=details>Table of Contents</span>
+</summary>
+<div class=inner><ul>
+<li>
+<a href=#%e7%90%86%e8%ae%ba aria-label=理论>理论</a></li><li>
+<a href=#%e5%b7%a5%e5%85%b7 aria-label=工具>工具</a></li><li>
+<a href=#%e6%b5%81%e7%a8%8b aria-label=流程>流程</a><ul>
+<li>
+<a href=#%e8%8e%b7%e5%8f%96%e5%85%83%e6%95%b0%e6%8d%aemetadata aria-label=获取元数据（metadata）>获取元数据（metadata）</a></li><li>
+<a href=#%e5%9b%be%e7%89%87%e8%bd%ac%e6%96%87%e5%ad%97%e5%a4%84%e7%90%86 aria-label=图片转文字处理>图片转文字处理</a></li><li>
+<a href=#%e6%96%87%e6%9c%ac%e5%a4%84%e7%90%86 aria-label=文本处理>文本处理</a></li><li>
+<a href=#%e6%9c%af%e8%af%ad%e5%90%8d%e8%af%8d%e5%a4%84%e7%90%86 aria-label=术语名词处理>术语名词处理</a>
+</li></ul></li></ul></div></details>
+</div><div class=post-content>
+<h3 id=理论>理论<a hidden class=anchor aria-hidden=true href=#理论>#</a></h3><ul>
+<li>知识模块=知识结构+知识点</li><li>数据库=字段+值</li></ul><h3 id=工具>工具<a hidden class=anchor aria-hidden=true href=#工具>#</a></h3><ul>
+<li>知网词典、术语在线->查询词语的准确性</li></ul><h3 id=流程>流程<a hidden class=anchor aria-hidden=true href=#流程>#</a></h3><h4 id=获取元数据metadata>获取元数据（metadata）<a hidden class=anchor aria-hidden=true href=#获取元数据metadata>#</a></h4><p>在读秀、万方获取元信息，在emeditor中编写统一的脚本，进行处理
+可以将这些数据做成自己的一个书藉库</p><h4 id=图片转文字处理>图片转文字处理<a hidden class=anchor aria-hidden=true href=#图片转文字处理>#</a></h4><ul>
+<li>
+<p>ABBYY FineReaderOCR. exe 主程序、FineReader. exe PDF 阅读+处理程序、HotFolder. exe 企业级批量 OCR、ScreenshotReader. exe PC 桌面 OCR</p></li><li>
+<img src="./处理一本书的流程/Pasted image 20210831172831.png" alt="Pasted image 20210831172831" style=zoom:80%>
+</li><li>
+<p>字体，正文一般是方正书宋体</p></li><li>
+<img src="./处理一本书的流程/Pasted image 20210831174150.png" alt="Pasted image 20210831174150.png" style=zoom:50%>
+</li><li>
+<p>预处理选项</p></li><li>
+<p>![Pasted image 20210831174245.png](./处理一本书的流程/Pasted image 20210831174245.png)</p></li><li>
+<img src="./处理一本书的流程/Pasted image 20210831172831.png" alt="Pasted image 20210831172831" style=zoom:67%>
+</li><li>
+<img src="./处理一本书的流程/Pasted image 20210913212243.png" alt="Pasted image 20210913212243" style=zoom:67%>
+</li><li>
+<p>高级玩法，自己设置字符集</p><ul>
+<li>HT只需要4-8cpu，10G内存，可以用虚拟机来运行</li></ul></li><li>
+<p>PDF保存设置</p></li><li>
+<img src="./处理一本书的流程/Pasted image 20210831183503.png" alt="Pasted image 20210831183503" style=zoom:67%>
+</li></ul><h4 id=文本处理>文本处理<a hidden class=anchor aria-hidden=true href=#文本处理>#</a></h4><ul>
+<li>[[emeditor]] 处理文本
+<ol>
+<li>通过字符数字+非句末标点，去模糊性定位章节</li><li>如果可以找到文字性材料，一定要是aw3格式，不是epub格式（epub格式很可能是后边人制作的，不是出版社制作的）
+sigil，快速查看epub格式
+html格式可以直接导入sm中
+这个结构就是为了处理前备知识不足的问题
+属于增量阅读的变种用法
+我们先想想,处理书籍的时候,最核心的一点就在于《名词的积累》
+名词,可以展开这个名词的属性(可以往知识图谱这个结构走)
+所以,这块儿属于读书的核心,很多书,读不下去,第一关就是词汇量的问题
+特别是某个,陌生领域,陌生的词汇,这个词汇不解决,你后续一堆的问题。
+处理词汇的办法有好几个
+常见的自动化处理,就是分词</li></ol></li></ul><h4 id=术语名词处理>术语名词处理<a hidden class=anchor aria-hidden=true href=#术语名词处理>#</a></h4><ul>
+<li>自动化分词处理：[[hanlp]]</li><li>理解一段话，一篇文章，最终要的是搞懂其中名词的含义，NPL 可以快速判断其中的名词，然后可以挑选出来，快速查找意思</li></ul></div><footer class=post-footer>
+<div class="container mb-3">
+<div class=row>
+<div class=col-md-6>
+<i class="fas fa-arrow-left" title=Left aria-hidden=true></i>&nbsp;
+<a href=https://fhlp.me/posts/%E9%98%85%E8%AF%BB/%E5%A4%84%E7%90%86%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/%E9%98%85%E8%AF%BB%E4%B8%8E%E5%90%8D%E8%AF%8D%E9%9A%9C%E7%A2%8D/>阅读与名词障碍</a>
+</div></div></div><nav class=paginav>
+<a class=prev href=https://fhlp.me/posts/%E9%98%85%E8%AF%BB/%E5%A4%84%E7%90%86%E4%B8%80%E6%9C%AC%E4%B9%A6%E7%9A%84%E6%B5%81%E7%A8%8B/%E9%98%85%E8%AF%BB%E4%B8%8E%E5%90%8D%E8%AF%8D%E9%9A%9C%E7%A2%8D/>
+<span class=title>« Prev Page</span>
+<br>
+<span>阅读与名词障碍</span>
+</a>
+<a class=next href=https://fhlp.me/posts/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/convolutions/>
+<span class=title>Next Page »</span>
+<br>
+<span>Convolutions</span>
+</a>
+</nav></footer></article></main><footer class=footer>
+<span>&copy; 2022 <a href=https://fhlp.me/>FHLP</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script>
+<script>document.querySelectorAll("pre > code").forEach(t=>{const n=t.parentNode.parentNode,e=document.createElement("button");e.classList.add("copy-code"),e.innerText="copy";function s(){e.innerText="copied!",setTimeout(()=>{e.innerText="copy"},2e3)}e.addEventListener("click",o=>{if("clipboard"in navigator){navigator.clipboard.writeText(t.textContent),s();return}const e=document.createRange();e.selectNodeContents(t);const n=window.getSelection();n.removeAllRanges(),n.addRange(e);try{document.execCommand("copy"),s()}catch(e){}n.removeRange(e)}),n.classList.contains("highlight")?n.appendChild(e):n.parentNode.firstChild==n||(t.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?t.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(e):t.parentNode.appendChild(e))})</script>
+</body></html>
